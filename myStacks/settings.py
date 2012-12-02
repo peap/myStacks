@@ -9,10 +9,12 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
+PROJECT_DIR = '/home/eap/code/django/myStacks/'
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'db/myStacks.db'
+        'NAME': ''.join([PROJECT_DIR, 'myStacks/db/myStacks.db'])
     }
 }
 
