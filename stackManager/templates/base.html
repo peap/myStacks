@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <title>
+    myStacks
+  </title>
+</head>
+<body>
+  {% block navigation %}
+    <div id="navbar">
+      <span class="navtab">
+        <a href="{% url home %}">Home</a>
+      </span>
+      <span class="navtab">
+        <a href="{% url collections %}">Collections</a>
+      </span>
+      <span class="navtab">
+        <a href="{% url items %}">Items</a>
+      </span>
+      <span class="navtab">
+        <a href="{% url wishlist %}">Wish List</a>
+      </span>
+    </div>
+  {% endblock %}
+
+  {% block content %}
+  {% endblock %}
+</body>
+</html>

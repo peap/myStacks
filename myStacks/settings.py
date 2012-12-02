@@ -9,12 +9,12 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-PROJECT_DIR = '/home/eap/code/django/myStacks/'
+PROJECT_ROOT = '/home/eap/code/django/myStacks/'
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': ''.join([PROJECT_DIR, 'myStacks/db/myStacks.db'])
+        'NAME': ''.join([PROJECT_ROOT, 'myStacks/db/myStacks.db'])
     }
 }
 
@@ -104,6 +104,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    ''.join([PROJECT_ROOT, 'stackManager/templates/'])
 )
 
 INSTALLED_APPS = (
@@ -114,7 +115,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
+    'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'stackManager',
