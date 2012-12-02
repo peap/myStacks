@@ -4,4 +4,33 @@
 
 <h1>My Collections</h1>
 
+<div>
+  <a href="{% url create_collection %}">Create Collection</a>
+</div>
+
+{% if collections %}
+
+  <table id="collections_table">
+    <thead>
+      <th>Name</th>
+      <th>Type</th>
+      <th># Items</th>
+      <th>Created</th>
+      <th>Last Update</th>
+    </thead>
+    <tbody>
+      {% for coll in collections %}
+        <tr>
+          <td>{{ coll.name }}</td>
+          <td>{{ coll.disposition }}</td>
+          <td>{{ coll.count }}</td>
+          <td>{{ coll.created }}</td>
+          <td>{{ coll.modified }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+{% endif %}
+
 {% endblock %}

@@ -21,9 +21,15 @@ class Collection(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     modified = models.DateTimeField(auto_now=True)
 
+    def __unicode__(self):
+        return self.name
+
 
 class Location(models.Model):
     name = models.CharField(max_length=100)
+
+    def __unicode__(self):
+        return self.name
 
 
 class Item(models.Model):
@@ -33,6 +39,9 @@ class Item(models.Model):
 
 
 class VinylRecord(Item):
-    title = models.CharField(max_length=100)
+    album = models.CharField(max_length=100)
     artist = models.CharField(max_length=100)
+
+    def __unicode__(self):
+        return self.title
 

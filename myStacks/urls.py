@@ -7,9 +7,10 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     url(r'^$', 'stackManager.views.home', name='home'),
-    url(r'^$', 'stackManager.views.collections', name='collections'),
-    url(r'^$', 'stackManager.views.items', name='items'),
-    url(r'^$', 'stackManager.views.wishlist', name='wishlist'),
+    url(r'^collections/$', 'stackManager.views.collections', name='collections'),
+    url(r'^collections/create/$', 'stackManager.views.create_collection', name='create_collection'),
+    url(r'^items/$', 'stackManager.views.items', name='items'),
+    url(r'^wishlist/$', 'stackManager.views.wishlist', name='wishlist'),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
